@@ -1,0 +1,231 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scripts/room.gd" type="Script" id=1]
+[ext_resource path="res://fonts/pixel.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/pc2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Day without.png" type="Texture" id=4]
+[ext_resource path="res://fonts/Pixeled.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scripts/pcMenu.gd" type="Script" id=6]
+[ext_resource path="res://scenes/PCUpgrade.tscn" type="PackedScene" id=7]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 5 )
+
+[node name="MainPanel" type="Panel" groups=[
+"Persist",
+]]
+margin_right = 1440.0
+margin_bottom = 2560.0
+theme = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 720.471 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.203922, 0.286275, 0.368627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Day without" type="Sprite" parent="."]
+position = Vector2( 717.759, 1190.29 )
+scale = Vector2( 0.357414, 0.357414 )
+texture = ExtResource( 4 )
+
+[node name="DankLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -276.089
+margin_top = 46.3483
+margin_right = 283.911
+margin_bottom = 609.348
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.92549, 0.941176, 0.945098, 1 )
+text = "[dank]
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DankLabel2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -276.089
+margin_top = 214.538
+margin_right = 283.911
+margin_bottom = 777.538
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.92549, 0.941176, 0.945098, 1 )
+text = "$DANK"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plusDank" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 161.035
+margin_top = 9.68439
+margin_right = 450.031
+margin_bottom = 288.684
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.180392, 0.8, 0.443137, 1 )
+text = "[plus]
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minusDank" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 261.658
+margin_top = 249.377
+margin_right = 566.658
+margin_bottom = 528.377
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.752941, 0.223529, 0.168627, 1 )
+text = "[minus]
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MiningHashrateLabel" type="Label" parent="."]
+margin_left = 1091.62
+margin_top = 1665.96
+margin_right = 1219.62
+margin_bottom = 1803.96
+custom_fonts/font = ExtResource( 2 )
+text = "[0]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 740.317
+margin_top = 1381.96
+margin_right = 3830.32
+margin_bottom = 5387.96
+rect_scale = Vector2( 0.05, 0.05 )
+custom_fonts/font = ExtResource( 2 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hashTimer" type="Timer" parent="."]
+
+[node name="elecTimer" type="Timer" parent="."]
+wait_time = 2.1
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 26.0
+margin_top = 32.0
+margin_right = 453.0
+margin_bottom = 176.0
+text = "save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pcMenu" type="Panel" parent="." groups=[
+"Persist",
+]]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -477.0
+margin_top = -754.5
+margin_right = 477.0
+margin_bottom = 754.5
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="pcMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.172549, 0.243137, 0.313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shopButtonClose" type="Button" parent="pcMenu"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -192.133
+margin_top = 37.5612
+margin_right = -39.1328
+margin_bottom = 134.561
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.92549, 0.941176, 0.945098, 1 )
+text = "close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="pcMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -445.0
+margin_top = -590.5
+margin_right = 445.0
+margin_bottom = 712.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="pcMenu/MarginContainer"]
+margin_right = 890.0
+margin_bottom = 1303.0
+custom_constants/vseparation = 18
+custom_constants/hseparation = 18
+
+[node name="firstPC" parent="pcMenu/MarginContainer/GridContainer" instance=ExtResource( 7 )]
+
+[node name="secondPC" parent="pcMenu/MarginContainer/GridContainer" instance=ExtResource( 7 )]
+margin_top = 218.0
+margin_bottom = 418.0
+
+[node name="shopButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -313.0
+margin_top = -144.0
+custom_colors/font_color = Color( 0.92549, 0.941176, 0.945098, 1 )
+text = "shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="hashTimer" to="." method="_on_hashTimer_timeout"]
+[connection signal="timeout" from="elecTimer" to="." method="_on_elecTimer_timeout"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="pcMenu/shopButtonClose" to="." method="_on_shopButtonClose_pressed"]
+[connection signal="pressed" from="shopButton" to="." method="_on_shopButton_pressed"]

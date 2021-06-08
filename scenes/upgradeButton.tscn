@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/icon.png" type="Texture" id=1]
+
+[node name="Button" type="Button"]
+margin_right = 103.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 32.3433
+margin_top = 2.97637
+margin_right = 83.3433
+margin_bottom = 16.9764
+text = "upgrade"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 10.9685
+margin_top = 2.77795
+margin_right = 23.9685
+margin_bottom = 15.778
+size_flags_stretch_ratio = 0.74
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
